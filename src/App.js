@@ -120,7 +120,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Add Car</h1>
+          <h1>Add New Car</h1>
         <form onSubmit={this.handleSubmit}>
     <label>
       Name:
