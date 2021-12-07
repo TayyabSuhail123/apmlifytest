@@ -73,7 +73,16 @@ class App extends React.Component {
   getAllCars()
   {
     
-    axios.get(`http://localhost:3000/cars`)
+    // axios.get(`http://localhost:3000/cars`)
+    // .then(res => {
+    //   debugger;
+    //   const cardata = res.data.Items;
+    //   this.setState({data:[]});
+    //   this.setState({data:cardata});
+
+    // })
+
+    axios.get(`https://2etpcrs88g.execute-api.us-east-1.amazonaws.com/dev/cars`)
     .then(res => {
       debugger;
       const cardata = res.data.Items;
@@ -98,7 +107,21 @@ class App extends React.Component {
      debugger;
 
 
-    axios.put('http://localhost:3000/cars', cardata)
+    // axios.put('http://localhost:3000/cars', cardata)
+    // .then(res => {
+    //   debugger;
+    //   if(res.status===202)
+    //   {
+    //     this.getAllCars();
+    //    alert("Car added to db");
+    //    this.setState({
+    //     name: '',desc:'',type:'',fuelType:'',manu:''
+    //   });
+    //   }
+      
+    // })
+
+    axios.put('https://2etpcrs88g.execute-api.us-east-1.amazonaws.com/dev/cars', cardata)
     .then(res => {
       debugger;
       if(res.status===202)
