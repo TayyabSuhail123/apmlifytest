@@ -82,7 +82,7 @@ class App extends React.Component {
 
     // })
 
-    axios.get(`https://2etpcrs88g.execute-api.us-east-1.amazonaws.com/dev/cars`)
+    axios.get(`https://aas31p6xl3.execute-api.us-east-2.amazonaws.com/dev/cars`)
     .then(res => {
       debugger;
       const cardata = res.data.Items;
@@ -121,7 +121,7 @@ class App extends React.Component {
       
     // })
 
-    axios.put('https://2etpcrs88g.execute-api.us-east-1.amazonaws.com/dev/cars', cardata)
+    axios.put('https://aas31p6xl3.execute-api.us-east-2.amazonaws.com/dev/cars', cardata)
     .then(res => {
       debugger;
       if(res.status===202)
