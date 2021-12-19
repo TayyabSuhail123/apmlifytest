@@ -85,7 +85,9 @@ class App extends React.Component {
     axios.get(`https://2bugjiyrt9.execute-api.us-east-2.amazonaws.com/prod/cars`)
     .then(res => {
       debugger;
+      console.log("getting all cars");
       const cardata = res.data.Items;
+      console.log(cardata);
       this.setState({data:[]});
       this.setState({data:cardata});
 
