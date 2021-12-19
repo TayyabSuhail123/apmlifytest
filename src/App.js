@@ -82,7 +82,7 @@ class App extends React.Component {
 
     // })
 
-    axios.get(`https://vo444zgov3.execute-api.us-east-2.amazonaws.com/Stage/cars`)
+    axios.get(`https://2bugjiyrt9.execute-api.us-east-2.amazonaws.com/prod/cars`)
     .then(res => {
       debugger;
       const cardata = res.data.Items;
