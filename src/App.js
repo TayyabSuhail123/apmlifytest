@@ -121,7 +121,7 @@ class App extends React.Component {
       
     // })
 
-    axios.put('https://fpya2jykh5.execute-api.us-east-2.amazonaws.com/Prod/cars', cardata)
+    axios.put('https://2bugjiyrt9.execute-api.us-east-2.amazonaws.com/prod/cars', cardata)
     .then(res => {
       debugger;
       if(res.status===202)
