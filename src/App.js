@@ -86,7 +86,7 @@ class App extends React.Component {
     .then(res => {
       debugger;
       console.log("getting all cars");
-      // const cardata = res.data.Items;
+       const cardata = res.data.Items;
       console.log(cardata);
       // this.setState({data:[]});
       // this.setState({data:cardata});
