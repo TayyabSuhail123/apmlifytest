@@ -123,7 +123,7 @@ class App extends React.Component {
       
     // })
 
-    axios.put('https://2bugjiyrt9.execute-api.us-east-2.amazonaws.com/prod/cars', cardata)
+    axios.put('http://127.0.0.1:3001/cars', cardata)
     .then(res => {
       debugger;
       if(res.status===202)
@@ -145,7 +145,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Add New Car</h1>
+          <h1>Add Newsss Car</h1>
         <form onSubmit={this.handleSubmit}>
     <label>
       Name:
