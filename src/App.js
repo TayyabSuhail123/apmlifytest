@@ -73,25 +73,23 @@ class App extends React.Component {
   getAllCars()
   {
     
-    // axios.get(`http://localhost:3000/cars`)
-    // .then(res => {
-    //   debugger;
-    //   const cardata = res.data.Items;
-    //   this.setState({data:[]});
-    //   this.setState({data:cardata});
-
-    // })
-
-    axios.get(`https://2bugjiyrt9.execute-api.us-east-2.amazonaws.com/prod/cars`)
+    axios.get(`http://localhost:3000/cars`)
     .then(res => {
       debugger;
-      console.log("getting all cars");
-       const cardata = res.data.Items;
-      console.log(cardata);
-      // this.setState({data:[]});
-      // this.setState({data:cardata});
+      const cardata = res.data.Items;
+      let resultArr=[];
+      for(let car of cardata)
+      {
+        console.log(car.name.S);
+         let obj={name:car.name.S,type:car.type.S,manufacturer:car.manufacturer.S,description:car.description.S,id:car.id.S}
+         resultArr.push(obj);
+
+      }
+      this.setState({data:[]});
+      this.setState({data:resultArr});
 
     })
+    
   }
 
   handleSubmit(event) {
@@ -109,30 +107,18 @@ class App extends React.Component {
      debugger;
 
 
-    // axios.put('http://localhost:3000/cars', cardata)
-    // .then(res => {
-    //   debugger;
-    //   if(res.status===202)
-    //   {
-    //     this.getAllCars();
-    //    alert("Car added to db");
-    //    this.setState({
-    //     name: '',desc:'',type:'',fuelType:'',manu:''
-    //   });
-    //   }
-      
-    // })
-
-    axios.put('http://127.0.0.1:3001/cars', cardata)
+    axios.put('http://localhost:3000/cars', cardata)
     .then(res => {
       debugger;
-      if(res.status===202)
+      if(res.status===200)
       {
-        this.getAllCars();
-       alert("Car added to db");
+        alert("Car added to db");
+        
        this.setState({
         name: '',desc:'',type:'',fuelType:'',manu:''
       });
+
+      this.getAllCars();
       }
       
     })
