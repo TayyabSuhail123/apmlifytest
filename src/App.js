@@ -73,7 +73,7 @@ class App extends React.Component {
   getAllCars()
   {
     
-    axios.get(`http://localhost:3000/cars`)
+    axios.get(`https://jko9wyu5x0.execute-api.us-east-2.amazonaws.com/Stage/cars`)
     .then(res => {
       debugger;
       const cardata = res.data.Items;
@@ -107,7 +107,7 @@ class App extends React.Component {
      debugger;
 
 
-    axios.put('http://localhost:3000/cars', cardata)
+    axios.put('https://jko9wyu5x0.execute-api.us-east-2.amazonaws.com/Stage/cars', cardata)
     .then(res => {
       debugger;
       if(res.status===200)
